@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+        <!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+<!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+
+
+</head>
+<body>
+    <!-- nav bar -->
+    <header>
+        <!-- Navbar -->
+        <nav class="navbar navbar-expand-lg  fixed-top" style="background-color: rgb(78, 76, 76);">
+          <div class="container-fluid">
+            <button class="navbar-toggler" type="button" data-mdb-toggle="collapse" data-mdb-target="#navbarExample01" aria-controls="navbarExample01" aria-expanded="false" aria-label="Toggle navigation">
+              <i class="fas fa-bars"></i>
+            </button>
+            <div class=" col-6 collapse navbar-collapse" id="navbarExample01">
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item active">
+                  <a class="nav-link text-light" aria-current="page" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link text-light" href="#">Features</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link text-light" href="#">Pricing</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link text-light" href="#">About</a>
+                </li>
+              </ul>
+            </div>
+            <div class=" col-3"></div>
+            <div class=" col-3 collapse navbar-collapse " style="margin-left: 200px;" id="navbarExample01">
+             
+                <a class="nav-link text-light " href="/" onclick="logout()">Logout</a>
+          
+            </div>
+          </div>
+        </nav>
+        <!-- Navbar -->
+      
+        <!-- Background image -->
+        <div class="p-5 text-center bg-image" style="
+            background-image: url('https://gac.ac.in/data/wp-content/uploads/2024/01/indian-money-com-reviews_96d2f9eae.jpg');
+            height: 700px;
+            width: 100%;
+            margin-top: 60px;
+            background-repeat: no-repeat;
+            background-size: cover;
+          ">
+          <div class="mask mt-5" style="background-color: rgba(0, 0, 0, 0.6);">
+            <div class="d-flex justify-content-center align-items-center h-90">
+              <div class="text-white">
+                <h1 id="uname" class="mb-3">Welcome User</h1>
+                <h4 class="mb-3">Online Banking Services</h4>
+                
+              </div>
+            </div>
+          </div>
+
+          <div class="container">
+            <div class="row mt-5">
+                <div class="col-6">
+                    <h1 class="text-light mt-3 shadow"  style="background-color: rgba(0, 0, 0, 0.6);">Deposit</h1>
+
+                    <form action="" class="border shadow p-3">
+                        <input type="text" id="deposite_amnt" class="form-control mb-2" placeholder="Enter Your Amount">
+                        <input type="text" id="deposite_acno" class="form-control" placeholder="Enter Your Account Number">
+                        <div class="text-center p-2">
+                            <button class="btn btn-primary shadow" type="button" onclick="depositeMoney()">Deposit</button>
+                        </div>
+                       
+                        <div id="balance_amount">
+
+                        </div>
+
+                    </form>
+                </div>
+                <div class="col-6">
+                    <h1 class="text-light mt-3 shadow"  style="background-color: rgba(0, 0, 0, 0.6);">Withdraw</h1>
+                   
+                    <form action="" class="border shadow p-3">
+                        <input type="text" id="withdraw_amnt" class="form-control mb-2" placeholder="Enter Your Amount">
+                        <!-- <input type="text" id="withdraw_pswd" class="form-control" placeholder="Enter Your Password"> -->
+                        <input type="text" id="withdraw_acno" class="form-control" placeholder="Enter Your account No">
+
+                        <div class="text-center p-2">
+                            <button class="btn btn-primary shadow" type="button" onclick="Withdraw()">Withdraw</button>
+                        </div>
+                       <div id="Withdraw_amnt"> </div>
+                    </form>
+                </div>
+            </div>
+          </div>
+        </div>
+        <!-- Background image -->
+      </header>
+    <!-- home page -->
+    <!-- footer -->
+    <footer class=" align-items-center text-lg-start" style="background-color: rgb(89, 88, 88);">
+        <!-- Grid container -->
+        <div class="container p-4 pb-0 ">
+          <form action="">
+            <!--Grid row-->
+            <div style="margin-bottom: 30px;" class="row  mt-4">
+              <!--Grid column-->
+              <div class="col-auto mb-4 mb-md-0" style="margin-left: 200px;">
+                <p class="pt-2">
+                  <strong class="text-light">Sign up for our newsletter</strong>
+                </p>
+              </div>
+              <!--Grid column-->
+      
+              <!--Grid column-->
+              <div class="col-md-5 col-12 mb-4 mb-md-0">
+                <!-- Email input -->
+                <div class="form-outline mb-4">
+                  <input type="email" id="form5Example25" class="form-control" style="background-color: rgb(210, 211, 212);" placeholder="Email address">
+                 
+                </div>
+              </div>
+              <!--Grid column-->
+      
+              <!--Grid column-->
+              <div class="col-auto mb-3 mb-md-0">
+                <!-- Submit button -->
+                <button type="submit" class="btn btn-dark mb-4">
+                  Subscribe
+                </button>
+              </div>
+              <!--Grid column-->
+            </div>
+            <!--Grid row-->
+          </form>
+        </div>
+        <!-- Grid container -->
+      
+        <!-- Copyright -->
+        <div class="text-center p-3" style="background-color: rgba(240, 235, 235, 0.2);">
+         <b> © 2020 Copyright:
+          <a class="text-dark" href="https://mdbootstrap.com/">MDBootstrap.com</a></b>
+        </div>
+        <!-- Copyright -->
+      </footer>
+
+
+
+<script src="./bank.js"></script>
+
+</body></html>
